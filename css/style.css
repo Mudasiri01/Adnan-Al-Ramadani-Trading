@@ -595,17 +595,17 @@ html[dir="rtl"] .mobile-drawer.open {
 }
 
 /* --------------------------------------------------------------------------
-   8. Hero Section (Cinematic Luxury)
+   8. Hero Section (Cinematic Luxury & Real Working Showcase)
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 85vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(16, 28, 24, 0.92) 0%, rgba(18, 60, 45, 0.88) 100%),
-              url('../assets/images/hero.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(8, 22, 17, 0.94) 0%, rgba(18, 60, 45, 0.88) 50%, rgba(11, 37, 27, 0.95) 100%),
+              url('../assets/images/hero-technician.jpg') center/cover no-repeat;
   color: var(--white);
-  padding: 5rem 0;
+  padding: 5.5rem 0 4.5rem;
   overflow: hidden;
 }
 
@@ -615,32 +615,104 @@ html[dir="rtl"] .mobile-drawer.open {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(213, 173, 98, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(213, 173, 98, 0.1) 1.5px, transparent 1.5px);
   background-size: 32px 32px;
   pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+}
+
+.hero-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(213, 173, 98, 0.4);
+  backdrop-filter: blur(8px);
+  margin-bottom: 1.5rem;
+}
+
+.live-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #25D366;
+  box-shadow: 0 0 10px #25D366;
+  animation: live-blink 1.8s infinite;
+}
+
+@keyframes live-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 .hero-title {
   color: var(--white);
-  font-size: clamp(2.2rem, 3.8vw + 1rem, 3.75rem);
+  font-size: clamp(2.1rem, 3.2vw + 1rem, 3.35rem);
   font-weight: 800;
-  line-height: 1.22;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.25;
+  margin-bottom: 1.35rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title .title-accent {
+  background: linear-gradient(135deg, #F2D388 0%, #D5AD62 60%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .hero-desc {
-  font-size: clamp(1.05rem, 1.2vw + 0.5rem, 1.35rem);
+  font-size: clamp(1.05rem, 1.1vw + 0.4rem, 1.25rem);
   color: #D3E0D8;
   line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 650px;
+}
+
+/* 4-Item Value Grid in Hero */
+.hero-value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
   margin-bottom: 2.25rem;
-  max-width: 700px;
+}
+
+.hero-value-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #E2ECE5;
+  backdrop-filter: blur(4px);
+}
+
+.hero-value-item i {
+  color: var(--accent);
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .hero-cta-group {
@@ -648,30 +720,163 @@ html[dir="rtl"] .mobile-drawer.open {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.75rem;
 }
 
-.hero-features {
+.hero-call-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: #CAD5CF;
+  padding-top: 0.5rem;
+}
+
+.hero-call-ribbon a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Hero Visual Showcase Card (Right Column) */
+.hero-showcase {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(213, 173, 98, 0.3) 0%, rgba(255, 255, 255, 0.08) 100%);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-showcase-inner {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.hero-showcase-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.hero-showcase:hover .hero-showcase-img {
+  transform: scale(1.03);
+}
+
+/* Floating Glass Badges on Image */
+.hero-floating-badge {
+  position: absolute;
+  background: rgba(16, 28, 24, 0.88);
+  border: 1px solid rgba(213, 173, 98, 0.45);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  padding: 0.75rem 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 3;
+}
+
+.hero-badge-top {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+html[dir="rtl"] .hero-badge-top {
+  right: auto;
+  left: 1.5rem;
+}
+
+.hero-badge-bottom {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+html[dir="rtl"] .hero-badge-bottom {
+  left: auto;
+  right: 1.5rem;
+}
+
+.hero-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(23, 107, 74, 0.35);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.hero-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-badge-text strong {
+  font-size: 0.85rem;
+  color: var(--white);
+  line-height: 1.25;
+}
+
+.hero-badge-text span {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Quick Pest Inquiry Bar on Showcase */
+.hero-quick-bar {
+  background: rgba(16, 28, 24, 0.95);
+  border-top: 1px solid rgba(213, 173, 98, 0.25);
+  padding: 1.15rem 1.25rem;
+}
+
+.hero-quick-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-pest-pills {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 0.45rem;
 }
 
-.hero-feature-item {
-  display: flex;
+.pest-pill-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #CAD5CF;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 0.9rem;
-  color: #E2ECE5;
-  font-weight: 500;
+  gap: 0.35rem;
 }
 
-.hero-feature-item i {
-  color: var(--accent);
-  font-size: 1.15rem;
+.pest-pill-btn:hover {
+  background: var(--accent);
+  color: var(--dark);
+  border-color: var(--accent);
 }
 
 /* --------------------------------------------------------------------------
