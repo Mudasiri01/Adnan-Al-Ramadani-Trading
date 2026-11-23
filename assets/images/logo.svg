@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <!-- Shield Icon with Guard & Leaf Motif -->
+  <g transform="translate(4, 4)">
+    <defs>
+      <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#123C2D"/>
+        <stop offset="100%" stop-color="#0B251B"/>
+      </linearGradient>
+      <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F2D388"/>
+        <stop offset="50%" stop-color="#D5AD62"/>
+        <stop offset="100%" stop-color="#B88E3E"/>
+      </linearGradient>
+    </defs>
+    <!-- Outer Shield Frame -->
+    <path d="M28 2 L50 10 C50 34 39 49 28 54 C17 49 6 34 6 10 Z" fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Inner Accent Arc -->
+    <path d="M28 8 L44 14 C44 32 35 44 28 48 C21 44 12 32 12 14 Z" fill="#176B4A" opacity="0.4"/>
+    <!-- Protection Cross / Check / Leaf Symbol in Gold -->
+    <path d="M28 16 V38" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M19 25 C19 32 28 35 28 35 C28 35 37 32 37 25" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="28" cy="18" r="3" fill="url(#goldGrad)"/>
+    <circle cx="28" cy="45" r="2" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Typography Block -->
+  <g transform="translate(68, 12)">
+    <!-- Primary Brand Name (Dual Language in Logo) -->
+    <text x="0" y="20" font-family="'Cairo', 'Tajawal', sans-serif" font-weight="800" font-size="17" fill="#123C2D" letter-spacing="0.5" class="brand-text-ar">عدنان الرمضاني للتجارة</text>
+    <text x="0" y="37" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="10" fill="#D5AD62" letter-spacing="2.2" class="brand-text-en">ADNAN AL RAMADANI</text>
+    <text x="0" y="47" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="500" font-size="8" fill="#55685F" letter-spacing="1.5">PEST CONTROL SERVICES • OMAN</text>
+  </g>
+</svg>
