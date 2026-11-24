@@ -793,15 +793,6 @@ html[dir="rtl"] .hero-badge-top {
   left: 1.5rem;
 }
 
-.hero-badge-bottom {
-  bottom: 1.5rem;
-  left: 1.5rem;
-}
-
-html[dir="rtl"] .hero-badge-bottom {
-  left: auto;
-  right: 1.5rem;
-}
 
 .hero-badge-icon {
   width: 38px;
@@ -967,7 +958,7 @@ html[dir="rtl"] .intro-floating-card {
    -------------------------------------------------------------------------- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
 }
 
@@ -988,28 +979,70 @@ html[dir="rtl"] .intro-floating-card {
   border-color: rgba(23, 107, 74, 0.3);
 }
 
+/* ── Standard photo media (ant, mosquito, general) ── */
 .service-card-media {
   position: relative;
-  height: 220px;
+  height: 230px;
   overflow: hidden;
+  background-color: var(--primary-dark);
 }
 
 .service-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
 }
 
 .service-card:hover .service-card-media img {
-  transform: scale(1.08);
+  transform: scale(1.07);
+}
+
+/* ── Poster / marketing image variant ──
+   Applied to cards whose user image has white bg + headline text.
+   Keeps the full poster visible with a branded dark frame. */
+.service-card-media--poster {
+  background: linear-gradient(160deg, var(--primary-dark) 0%, var(--dark-surface) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-media--poster img {
+  object-fit: contain;
+  object-position: center center;
+  /* give the poster a small inset so the dark bg frames it */
+  padding: 6px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-card-media--poster img {
+  transform: scale(1.04);
+}
+
+/* subtle dark overlay on poster to blend with brand */
+.service-card-media--poster::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 15, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* keep badge / icon ABOVE the poster overlay */
+.service-card-media .service-card-badge,
+.service-card-media .service-card-icon {
+  z-index: 2;
 }
 
 .service-card-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(16, 28, 24, 0.85);
+  background: rgba(16, 28, 24, 0.88);
   color: var(--accent);
   border: 1px solid rgba(213, 173, 98, 0.4);
   backdrop-filter: blur(4px);
@@ -1018,6 +1051,7 @@ html[dir="rtl"] .intro-floating-card {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  z-index: 2;
 }
 
 html[dir="rtl"] .service-card-badge {
@@ -1040,6 +1074,7 @@ html[dir="rtl"] .service-card-badge {
   justify-content: center;
   font-size: 1.35rem;
   box-shadow: var(--shadow-md);
+  z-index: 2;
 }
 
 html[dir="rtl"] .service-card-icon {
@@ -1048,42 +1083,47 @@ html[dir="rtl"] .service-card-icon {
 }
 
 .service-card-body {
-  padding: 2rem 1.75rem 1.75rem;
+  padding: 2rem 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .service-card-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
   color: var(--primary-dark);
 }
 
 .service-card-desc {
-  font-size: 0.925rem;
+  font-size: 0.915rem;
   color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.65;
   flex-grow: 1;
+  /* reserve min height so short text doesn't misalign footer */
+  min-height: 4.5rem;
 }
 
 .service-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
   border-top: 1px solid var(--border-subtle);
   padding-top: 1rem;
-  margin-top: auto;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .service-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--secondary);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .service-link:hover {
