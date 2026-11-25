@@ -444,8 +444,30 @@ button, input, select, textarea {
 }
 
 .brand-logo img {
-  height: 48px;
-  width: auto;
+  height: 64px;
+  width: 64px;
+  max-width: 64px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover img {
+  transform: scale(1.02);
+}
+
+.brand-logo .logo-ltr {
+  display: none;
+}
+.brand-logo .logo-rtl {
+  display: block;
+}
+
+html[dir="ltr"] .brand-logo .logo-rtl {
+  display: none;
+}
+html[dir="ltr"] .brand-logo .logo-ltr {
+  display: block;
 }
 
 /* Nav Menu */
@@ -1004,17 +1026,20 @@ html[dir="rtl"] .intro-floating-card {
    Applied to cards whose user image has white bg + headline text.
    Keeps the full poster visible with a branded dark frame. */
 .service-card-media--poster {
-  background: linear-gradient(160deg, var(--primary-dark) 0%, var(--dark-surface) 100%);
+  background: radial-gradient(circle at center, #1b3d30 0%, #0a1913 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
 }
 
 .service-card-media--poster img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center center;
-  /* give the poster a small inset so the dark bg frames it */
-  padding: 6px;
+  padding: 4px;
+  border-radius: var(--radius-xs);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1027,7 +1052,7 @@ html[dir="rtl"] .intro-floating-card {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 20, 15, 0.08);
+  background: rgba(10, 20, 15, 0.05);
   pointer-events: none;
   z-index: 1;
 }
@@ -1093,6 +1118,10 @@ html[dir="rtl"] .service-card-icon {
   font-size: 1.2rem;
   margin-bottom: 0.65rem;
   color: var(--primary-dark);
+  min-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.35;
 }
 
 .service-card-desc {
@@ -1101,7 +1130,7 @@ html[dir="rtl"] .service-card-icon {
   line-height: 1.65;
   flex-grow: 1;
   /* reserve min height so short text doesn't misalign footer */
-  min-height: 4.5rem;
+  min-height: 4.8rem;
 }
 
 .service-card-footer {
@@ -1111,8 +1140,40 @@ html[dir="rtl"] .service-card-icon {
   gap: 0.75rem;
   border-top: 1px solid var(--border-subtle);
   padding-top: 1rem;
-  margin-top: 1.25rem;
+  margin-top: auto;
   flex-wrap: wrap;
+}
+
+.service-card-footer .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Service Detail Block image poster modifier */
+.intro-image-main.is-poster {
+  object-fit: contain;
+  background: radial-gradient(circle at center, #1b3d30 0%, #0a1913 100%);
+  padding: 1rem;
+  border: 1px solid rgba(213, 173, 98, 0.25);
+}
+
+.service-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.service-actions-row .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .service-link {
