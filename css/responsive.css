@@ -77,9 +77,19 @@
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .hero-section {
-    background-image: linear-gradient(180deg, rgba(8, 22, 17, 0.48) 0%, rgba(11, 37, 27, 0.68) 100%),
-                      url('../assets/images/hero-background.jpg');
-    background-position: center, 82% center;
+    background: linear-gradient(180deg, #0B251B 0%, rgba(11, 37, 27, 0.94) 56%, rgba(11, 37, 27, 0.82) 100%);
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 125vw;
+    max-height: 520px;
+    background: linear-gradient(180deg, rgba(11, 37, 27, 0.12) 0%, rgba(11, 37, 27, 0.05) 55%, rgba(11, 37, 27, 0.38) 100%),
+                url('../assets/images/hero-mobile.webp') center/cover no-repeat;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .hero-value-grid {
