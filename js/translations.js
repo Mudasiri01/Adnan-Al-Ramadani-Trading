@@ -35,7 +35,7 @@ const translations = {
     // Hero Section
     hero_title: "خدمات مكافحة الحشرات والآفات باحترافية في مسقط، سلطنة عمان",
     hero_desc: "نقدم حلولاً موثوقة لمكافحة الحشرات والآفات للمنازل والمنشآت التجارية في سلطنة عمان.",
-    hero_cta_quote: "احصل على عرض سعر فوري",
+    hero_cta_services: "استكشف خدماتنا",
     hero_cta_whatsapp: "تواصل عبر واتساب",
     hero_feature_1: "مبيدات آمنة وبدون روائح",
     hero_feature_2: "خدمات سكنية وتجارية",
@@ -274,7 +274,7 @@ const translations = {
     // Hero Section
     hero_title: "Professional Pest Control Services in Muscat, Oman",
     hero_desc: "Reliable pest control solutions for residential and commercial properties in Oman.",
-    hero_cta_quote: "Get a Free Instant Quote",
+    hero_cta_services: "Explore Our Services",
     hero_cta_whatsapp: "WhatsApp Us Directly",
     hero_feature_1: "Safe & Odorless Treatments",
     hero_feature_2: "Residential & Commercial",

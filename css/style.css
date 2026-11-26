@@ -780,6 +780,12 @@ html[dir="rtl"] .mobile-drawer.open {
   object-fit: contain;
 }
 
+#cockroach .intro-image-main,
+#rodent .intro-image-main {
+  height: auto;
+  object-fit: contain;
+}
+
 .intro-floating-card {
   position: absolute;
   bottom: -25px;
@@ -873,6 +879,16 @@ html[dir="rtl"] .intro-floating-card {
   height: 230px;
   overflow: hidden;
   background-color: var(--primary-dark);
+}
+
+.service-card-media.service-card-media--landscape {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.service-card-media--landscape img {
+  position: absolute;
+  inset: 0;
 }
 
 .service-card-media img {
@@ -1016,14 +1032,6 @@ html[dir="rtl"] .service-card-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Service Detail Block image poster modifier */
-.intro-image-main.is-poster {
-  object-fit: contain;
-  background: radial-gradient(circle at center, #1b3d30 0%, #0a1913 100%);
-  padding: 1rem;
-  border: 1px solid rgba(213, 173, 98, 0.25);
 }
 
 .service-actions-row {
