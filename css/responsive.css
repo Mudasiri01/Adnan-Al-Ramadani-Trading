@@ -77,7 +77,9 @@
 /* Mobile Devices (max-width: 767px) */
 @media (max-width: 767px) {
   .hero-section {
-    background-position: center, 85% center;
+    background-image: linear-gradient(180deg, rgba(8, 22, 17, 0.48) 0%, rgba(11, 37, 27, 0.68) 100%),
+                      url('../assets/images/hero-background.jpg');
+    background-position: center, 82% center;
   }
 
   .hero-value-grid {
