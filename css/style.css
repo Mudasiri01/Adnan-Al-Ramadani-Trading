@@ -765,6 +765,21 @@ html[dir="rtl"] .mobile-drawer.open {
   object-fit: contain;
 }
 
+#ant .intro-image-main {
+  height: auto;
+  object-fit: contain;
+}
+
+#mosquito .intro-image-main {
+  height: auto;
+  object-fit: contain;
+}
+
+#general .intro-image-main {
+  height: auto;
+  object-fit: contain;
+}
+
 .intro-floating-card {
   position: absolute;
   bottom: -25px;
