@@ -33,7 +33,6 @@ const translations = {
     topbar_call_us: "اتصل بنا:",
 
     // Hero Section
-    hero_badge: "خدمات مكافحة الآفات المعتمدة في مسقط",
     hero_title: "خدمات مكافحة الحشرات والآفات باحترافية في مسقط، سلطنة عمان",
     hero_desc: "نقدم حلولاً موثوقة لمكافحة الحشرات والآفات للمنازل والمنشآت التجارية في سلطنة عمان.",
     hero_cta_quote: "احصل على عرض سعر فوري",
@@ -43,14 +42,6 @@ const translations = {
     hero_feature_3: "تغطية شاملة لمحافظة مسقط",
     hero_feature_4: "معالجة دون مغادرة المنزل",
     hero_emergency_call: "اتصال مباشر واستفسارات فورية:",
-    hero_showcase_badge1_title: "استجابة فورية",
-    hero_showcase_badge1_sub: "كافة ولايات مسقط",
-    hero_quick_inquiry: "استفسار سريع عن آفة محددة:",
-    pill_cockroaches: "الصراصير",
-    pill_termites: "الرمة (النمل الأبيض)",
-    pill_bedbugs: "بق الفراش",
-    pill_rodents: "القوارض",
-    pill_ants: "النمل",
 
     // Trust / Introduction Section
     intro_tag: "نبذة عن الشركة",
@@ -144,6 +135,7 @@ const translations = {
     testimonials_section_tag: "تجارب العملاء",
     testimonials_section_title: "ماذا يقول عملاؤنا",
     testimonials_section_desc: "نحرص على تحقيق أعلى درجات الرضا والراحة لكل عميل نتعامل معه.",
+    testi_review_label: "مراجعة عميل",
     testi1_quote: "تمت معالجة مشكلة الصراصير في المطبخ بسرعة وبدون أي روائح مزعجة. تعامل راقٍ والتزام بالموعد المحدد.",
     testi1_author: "عميل في السيب",
     testi1_service: "مكافحة الصراصير - سكني",
@@ -280,7 +272,6 @@ const translations = {
     topbar_call_us: "Call Us:",
 
     // Hero Section
-    hero_badge: "Certified Pest Control Services in Muscat",
     hero_title: "Professional Pest Control Services in Muscat, Oman",
     hero_desc: "Reliable pest control solutions for residential and commercial properties in Oman.",
     hero_cta_quote: "Get a Free Instant Quote",
@@ -290,14 +281,6 @@ const translations = {
     hero_feature_3: "Full Muscat Coverage",
     hero_feature_4: "No Need to Vacate Property",
     hero_emergency_call: "Direct Hotline & Inquiries:",
-    hero_showcase_badge1_title: "Rapid Response",
-    hero_showcase_badge1_sub: "All Muscat Areas",
-    hero_quick_inquiry: "Quick Inquiry by Pest Problem:",
-    pill_cockroaches: "Cockroaches",
-    pill_termites: "Termites",
-    pill_bedbugs: "Bed Bugs",
-    pill_rodents: "Rodents",
-    pill_ants: "Ants",
 
     // Trust / Introduction Section
     intro_tag: "Company Introduction",
@@ -391,6 +374,7 @@ const translations = {
     testimonials_section_tag: "Testimonials",
     testimonials_section_title: "What Our Clients Say",
     testimonials_section_desc: "Dedicated to the peace of mind and satisfaction of every property owner we serve.",
+    testi_review_label: "Customer review",
     testi1_quote: "The kitchen cockroach issue was solved swiftly with no foul odors whatsoever. Courteous team and on-time arrival.",
     testi1_author: "Seeb Resident",
     testi1_service: "Cockroach Control - Residential",
